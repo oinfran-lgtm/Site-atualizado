@@ -1,7 +1,6 @@
 export const dynamic = 'force-dynamic';
 import ServicosSection from "@/components/ServicosSection";
 import FaqSection from "@/components/FaqSection";
-export const revalidate = 3600;
 export default function Home() {
   return (
     <main style={{ maxWidth: 900, margin: "0 auto", padding: "20px", fontFamily: "system-ui, sans-serif" }}>
