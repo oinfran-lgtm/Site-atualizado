@@ -37,6 +37,7 @@ function padronizarCategoria(valor: unknown): Categoria {
   return "Unissex / Outros";
 }
 export async function buscarServicos(): Promise<Servico[]> {
+    return SERVICOS_FIXOS;
   const resultado: Servico[] = [];
   let proximaPagina = "";
   do {
