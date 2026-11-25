@@ -42,7 +42,7 @@ export async function buscarServicos(): Promise<Servico[]> {
   do {
     const endereco = `https://firestore.googleapis.com/v1/projects/${ID_DO_PROJETO}/databases/(default)/documents/${NOME_DA_COLECAO}` + `?pageSize=300${proximaPagina ? `&pageToken=${encodeURIComponent(proximaPagina)}` : ""}`;
     const resposta = await fetch(endereco, { next: { revalidate: 3600 } });
-    if (!resposta.ok) { throw new Error(`Não foi possível ler os serviços no Firebase (código ${resposta.status}).`); }
+    if (!resposta.ok) { return SERVICOS_FIXOS; }
     const dados = await resposta.json();
     for (const documento of dados.documents ?? []) {
       const campos = documento.fields ?? {};
