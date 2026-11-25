@@ -1,5 +1,4 @@
 export const dynamic = 'force-dynamic';
-export const revalidate = 0;
 import ServicosSection from "@/components/ServicosSection";
 import FaqSection from "@/components/FaqSection";
 export const revalidate = 3600;
