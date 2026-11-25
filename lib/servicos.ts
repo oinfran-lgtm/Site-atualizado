@@ -11,7 +11,12 @@ const NOMES_DOS_CAMPOS = {
 };
 export type Categoria = "Masculino" | "Feminino" | "Unissex / Outros";
 export type Servico = { id: string; nome: string; preco: number; duracao: number; descricao: string; categoria: Categoria; ordem: number; };
-export type GrupoDeCategoria = { categoria: Categoria; emoji: string; servicos: Servico[]; };
+export type GrupoDeCategoria = { categoria:const SERVICOS_FIXOS: Servico[] = [
+  { id: "corte-old-school", nome: "Corte Old School Tesoura", preco: 90, duracao: 60, descricao: "Corte clássico na tesoura, acabamento na navalha.", categoria: "Masculino", ordem: 1 },
+  { id: "barba-toalha-quente", nome: "Barba Toalha Quente", preco: 70, duracao: 40, descricao: "Barbear com toalha quente e navalha.", categoria: "Masculino", ordem: 2 },
+  { id: "corte-barba", nome: "Corte + Barba", preco: 140, duracao: 90, descricao: "Corte Old School + barba com toalha quente.", categoria: "Masculino", ordem: 3 },
+  { id: "sobrancelha", nome: "Sobrancelha", preco: 30, duracao: 15, descricao: "Design e acabamento de sobrancelha.", categoria: "Masculino", ordem: 4 },
+]; Categoria; emoji: string; servicos: Servico[]; };
 const CATEGORIAS_NA_ORDEM: { categoria: Categoria; emoji: string }[] = [
   { categoria: "Masculino", emoji: "👨" },
   { categoria: "Feminino", emoji: "👩" },
